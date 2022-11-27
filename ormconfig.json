@@ -1,0 +1,16 @@
+{
+  "type": "postgres",
+  "entities": [
+    "dist/src/database/entities/*.js"
+  ],
+  "synchronize": false,
+  "keepConnectionAlive": false,
+  "migrationsRun": true,
+  "migrationsTableName": "migrations",
+  "migrations": [
+    "dist/src/database/migrations/*.js"
+  ],
+  "cli": {
+    "migrationsDir": "src/database/migrations"
+  }
+}
