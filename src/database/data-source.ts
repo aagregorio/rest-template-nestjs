@@ -8,7 +8,7 @@ const options: DataSourceOptions = {
   username: process.env.PG_USER,
   password: process.env.PG_PASSWORD,
   database: process.env.PG_DB,
-  entities: ['src/database/entities/*.{js,ts}'],
+  entities: [__dirname + '/src/**/*.entity{.ts,.js}'],
   // migrations: ['src/database/migrations/*{.ts,.js}'],
   synchronize: false,
   migrationsTableName: 'migrations',
