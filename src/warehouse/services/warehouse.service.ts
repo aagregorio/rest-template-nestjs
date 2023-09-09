@@ -1,9 +1,9 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Warehouse } from 'src/database/entities';
 import { CreateWarehouseDto, UpdateWarehouseDto } from 'src/dtos';
-import { WarehouseMapper } from 'src/mappers';
 import { Repository } from 'typeorm';
+import { WarehouseMapper } from '../mappers';
+import { Warehouse } from '../entities';
 
 @Injectable()
 export class WarehouseService {

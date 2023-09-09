@@ -1,9 +1,9 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Vendor } from 'src/database/entities';
 import { CreateVendorDto, UpdateVendorDto } from 'src/dtos';
-import { VendorMapper } from 'src/mappers';
 import { Repository } from 'typeorm';
+import { Vendor } from '../entities';
+import { VendorMapper } from '../mappers';
 
 @Injectable()
 export class VendorService {

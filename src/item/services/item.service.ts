@@ -1,9 +1,9 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Item } from 'src/database/entities';
 import { CreateItemDto, UpdateItemDto } from 'src/dtos';
-import { ItemMapper } from 'src/mappers';
 import { Repository } from 'typeorm';
+import { ItemMapper } from '../mappers';
+import { Item } from '../entities';
 
 @Injectable()
 export class ItemService {

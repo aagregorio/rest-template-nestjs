@@ -1,4 +1,3 @@
-import { MappersModule } from './mappers/mappers.module';
 import { WarehouseModule } from './warehouse/warehouse.module';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
@@ -8,7 +7,6 @@ import { ItemModule } from './item/item.module';
 
 @Module({
   imports: [
-    MappersModule,
     WarehouseModule,
     VendorModule,
     ItemModule,

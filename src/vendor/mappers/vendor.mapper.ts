@@ -1,17 +1,19 @@
 import { Injectable } from '@nestjs/common';
-import { Warehouse } from 'src/database/entities';
-import { CreateWarehouseDto, UpdateWarehouseDto } from 'src/dtos';
+import { CreateVendorDto, UpdateVendorDto } from 'src/dtos';
+import { Vendor } from '../entities';
 
 @Injectable()
-export class WarehouseMapper {
-  fromCreateToDomain(dto: CreateWarehouseDto, id?: string): Warehouse {
-    const warehouse = new Warehouse();
+export class VendorMapper {
+  fromCreateToDomain(dto: CreateVendorDto, id?: string): Vendor {
+    const warehouse = new Vendor();
 
     if (id) {
       warehouse.id = id;
     }
 
-    // TODO Address is pending
+    if (dto.address) {
+      warehouse.address = dto.address;
+    }
 
     warehouse.name = dto.name;
 
@@ -23,12 +25,14 @@ export class WarehouseMapper {
     return warehouse;
   }
 
-  fromUpdateToDomain(actual: Warehouse, update: UpdateWarehouseDto): Warehouse {
+  fromUpdateToDomain(actual: Vendor, update: UpdateVendorDto): Vendor {
     if (update.name) {
       actual.name = update.name;
     }
 
-    // TODO Address is pending
+    if (update.address) {
+      actual.address = update.address;
+    }
 
     if (update.items && update.items.length > 0) {
       // TODO Items mapper should be used here

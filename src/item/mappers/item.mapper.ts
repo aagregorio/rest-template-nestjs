@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { Item } from 'src/database/entities';
 import { CreateItemDto, UpdateItemDto } from 'src/dtos';
+import { Item } from '../entities';
 
 @Injectable()
 export class ItemMapper {

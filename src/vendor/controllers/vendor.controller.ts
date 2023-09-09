@@ -9,7 +9,7 @@ import {
   Put,
 } from '@nestjs/common';
 import { CreateVendorDto, UpdateVendorDto, VendorParamsDto } from 'src/dtos';
-import { VendorService } from './vendor.service';
+import { VendorService } from '../services/vendor.service';
 
 @Controller('warehouse')
 export class VendorController {

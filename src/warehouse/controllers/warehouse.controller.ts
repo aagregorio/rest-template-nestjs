@@ -8,9 +8,12 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
-import { CreateWarehouseDto, WarehouseParamsDto } from 'src/dtos';
-import { UpdateWarehouseDto } from 'src/dtos/warehouse/edit-warehouse.dto';
-import { WarehouseService } from './warehouse.service';
+import {
+  CreateWarehouseDto,
+  WarehouseParamsDto,
+  UpdateWarehouseDto,
+} from 'src/dtos';
+import { WarehouseService } from '../services';
 
 @Controller('warehouse')
 export class WarehouseController {

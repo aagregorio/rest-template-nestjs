@@ -1,9 +1,9 @@
 import { Address } from 'src/interfaces';
+import { Item } from 'src/item';
 import { Column, Entity, ManyToMany, PrimaryGeneratedColumn } from 'typeorm';
-import { Item } from '../entities';
 
 @Entity()
-export class Warehouse {
+export class Vendor {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -13,6 +13,6 @@ export class Warehouse {
   @Column({ type: 'jsonb' })
   address: Address;
 
-  @ManyToMany(() => Item, (i) => i.warehouses)
+  @ManyToMany(() => Item, (i) => i.vendors)
   items: Item[];
 }

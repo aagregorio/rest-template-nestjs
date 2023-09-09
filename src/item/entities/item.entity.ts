@@ -1,5 +1,6 @@
+import { Vendor } from 'src/vendor';
+import { Warehouse } from 'src/warehouse';
 import { Column, Entity, ManyToMany, PrimaryGeneratedColumn } from 'typeorm';
-import { Vendor, Warehouse } from '../entities';
 
 Entity();
 export class Item {
